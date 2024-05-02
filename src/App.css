@@ -1,11 +1,364 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 .container{
-  width: 100vw;
+  width: 100%;
+  /* border:1px solid black; */
   height: 100vh;
+  overflow: hidden;
+
+  .header{
+    background-color: rgba(240, 248, 255, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* border: 1px solid black; */
+
+    .logo{
+      background-color: rgb(250, 250, 250);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      /* border: 1px solid black; */
+
+      img{
+        width: 40px;
+      }
+
+      h1{
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(226, 52, 52);
+      }
+    }
+
+    .menu{
+      width: 100%;
+      display: flex;
+      background-color: rgba(250, 250, 250, 0.801);
+      backdrop-filter: blur(10px);
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      /* border: 1px solid black; */
+
+      ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 30px;
+
+        li{
+          list-style: none;
+          cursor: pointer;
+          transition: 0.2s;
+
+          a{
+            text-decoration: none;
+            color: rgb(226, 52, 52);
+            transition: 0.2s;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 3px 15px;
+
+            &:hover{
+              color: rgb(255, 255, 255);
+              background-color: rgb(226, 52, 52);
+            }
+          }
+
+          .activeNavButton{
+            color: rgb(255, 255, 255);
+            background-color: rgb(226, 52, 52);
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  .content{
+    width: 100%;
+    height: 80%;
+    margin-block: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home_container{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .home_content{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        .home_text{
+          width: 100%;
+          height: 70vh;
+          /* border: 1px solid black; */
+          scroll-snap-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+
+          img{
+            width: auto;
+            height: 70%;
+            object-fit: contain;
+          }
+
+          h2{
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(226, 52, 52);
+          }
+
+          p{
+            font-size: 22px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            color: rgb(29, 25, 25);
+
+            b{
+              font-weight: 600;
+              color: rgb(226, 52, 52);
+            }
+
+            i{
+              font-weight: 400;
+              color: rgb(109, 55, 55);
+            }
+          }
+
+          .startImage{
+            width: 1000px;
+            height: 80%;
+            mix-blend-mode: multiply;
+          }
+
+          .text{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid black; */
+          }
+
+          .chart{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid black; */
+
+            img{
+              width: auto;
+              height: 80%;
+            }
+          }
+
+          .list{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid black; */
+            transform: translateY(-30px);
+
+            ul{
+              display: flex;
+              flex-direction: column;
+              gap: 25px;
+
+              li{
+                list-style-type: none;
+                font-size: 24px;
+                text-align: start;
+
+                b{
+                  font-weight: 600;
+                  color: rgb(226, 52, 52);
+                }
+              }
+            }
+          }
+        }
+
+        .start{
+          scroll-snap-align: start;
+          display: block;
+        }
+        
+        .end{
+          scroll-snap-align: end;
+        }
+      }
+    }
+
+    .installation_container{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .installation_content{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        .install_text{
+          width: 100%;
+          height: 75vh;
+          /* border: 1px solid black; */
+          scroll-snap-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          h1{
+            color: rgb(226, 52, 52);
+          }
+
+          p{
+            
+          }
+          
+          .scrollable_steps{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 50px;
+
+            .step{
+              height: 600px;
+              width: 600px;
+              margin: 0;
+              padding: 0;
+
+              p{
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: 400;
+                color: rgb(29, 25, 25);
+                
+              }
+
+              img{
+                width: 500px;
+                height: 500px;
+                object-fit: contain;
+              }
+            }
+
+            .step2{
+              height: 600px;
+              width: 600px;
+              margin: 0;
+              padding: 0;
+
+              p{
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: 400;
+                color: rgb(29, 25, 25);
+                
+              }
+
+              img{
+                width: 400px;
+                height: 400px;
+                object-fit: contain;
+              }
+            }
+
+            &::-webkit-scrollbar{
+              width: 0.5em;
+            }
+        
+            &::-webkit-scrollbar-track{
+              background-color: rgba(250, 250, 250, 0.801);
+            }
+        
+            &::-webkit-scrollbar-thumb{
+              background-color: rgba(226, 52, 52, 0.801);
+            }
+        
+            &::-webkit-scrollbar-thumb:hover{
+              background-color: rgba(226, 52, 52, 0.801);
+            }
+        
+            &::-webkit-scrollbar-thumb:active{
+              background-color: rgba(226, 52, 52, 0.801);
+            }
+        
+            &::-webkit-scrollbar-corner{
+              background-color: rgba(226, 52, 52, 0.801);
+            }
+          }
+        }
+      }
+    }
+
+    &::-webkit-scrollbar{
+      width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track{
+      background-color: rgba(250, 250, 250, 0.801);
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background-color: rgba(226, 52, 52, 0.801);
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+      background-color: rgba(226, 52, 52, 0.801);
+    }
+
+    &::-webkit-scrollbar-thumb:active{
+      background-color: rgba(226, 52, 52, 0.801);
+    }
+
+    &::-webkit-scrollbar-corner{
+      background-color: rgba(226, 52, 52, 0.801);
+    }
+  }
 }
