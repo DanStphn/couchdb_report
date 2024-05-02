@@ -42,6 +42,12 @@ const Usage = () => {
                                         <li>Open a terminal or command prompt.</li>
                                         <li>Use the curl command-line tool to send HTTP requests to your CouchDB instance.</li>
                                         <li>For example, to create a new database named "mydatabase", you would run: <span>curl -X PUT http://username:password@localhost:5984/mydatabase</span>.</li>
+                                        <li>Here are some guides:
+                                            <ul>
+                                                <li><a href="https://docs.couchdb.org/en/stable/intro/curl.html">https://docs.couchdb.org/en/stable/intro/curl.html</a></li>
+                                                <li><a href="https://www.tutorialspoint.com/couchdb/couchdb_curl_futon.htm">https://www.tutorialspoint.com/couchdb/couchdb_curl_futon.htm</a> </li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
