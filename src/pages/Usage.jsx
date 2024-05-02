@@ -17,6 +17,7 @@ const Usage = () => {
                                 <div className="usage">
                                     <h2>Fauxton Web Interface</h2>
                                     <ul>
+                                        <li>Make sure you have CouchDB installed and is running (Automatically runs on system start if you checked "Install Apache CouchDB Windows Service" checkbox during installation.)</li>
                                         <li>Open your web browser and navigate to the URL of your CouchDB instance <a href='http://localhost:5984/_utils' target='_blank'>http://localhost:5984/_utils</a>.</li>
                                         <li>Log in to Fauxton using your CouchDB admin credentials.</li>
                                         <li>From the Fauxton dashboard, you can manage databases, create and edit documents, run queries, and perform other administrative tasks using the graphical interface.</li>

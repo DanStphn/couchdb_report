@@ -307,6 +307,16 @@
                 height: 400px;
                 object-fit: contain;
               }
+
+              span{
+                font-weight: 600;
+                color: rgb(152, 38, 38);
+
+                &:hover{
+                  color: rgb(208, 110, 110);
+                  cursor: pointer;
+                }
+              }
             }
 
             &::-webkit-scrollbar{
@@ -431,6 +441,37 @@
 
     &::-webkit-scrollbar-corner{
       background-color: rgba(226, 52, 52, 0.801);
+    }
+  }
+}
+
+.cookie_info{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.318);
+
+  .info-card{
+    width: 500px;
+    padding: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+    h2{
+      color: rgb(228, 65, 65);
+    }
+
+    strong{
+      color: brown;
+    }
+
+    button{
+      padding: 10px;
     }
   }
 }

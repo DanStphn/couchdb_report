@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import step1 from '../assets/step1.png'
 import step2 from '../assets/step2.png'
 import step3 from '../assets/step3.png'
@@ -11,6 +12,11 @@ import install8 from '../assets/install8.png'
 import install9 from '../assets/install9.png'
 
 const Installation = () => {
+    const [showCookie, setShowCookie] = useState(false)
+
+    const handleShowCookie = () =>{
+        setShowCookie(!showCookie)
+    }
     return(
         <>
             <div className="installation_container">
@@ -54,7 +60,7 @@ const Installation = () => {
                                 <img src={install4} alt="" />
                             </div>
                             <div className="step2">
-                                <p>5. It is also required to set a cookie as it is used for secure communication between CouchDB nodes in a cluster. For more information, <a>Click Here</a>. Click on 'Random Cookie' to generate a random cookie or you could input your own generated cookie and click on 'Validate Cookie' to see if its valid.</p>
+                                <p>5. It is also required to set a cookie as it is used for secure communication between CouchDB nodes in a cluster. For more information, <span onClick={handleShowCookie}>Click Here</span>. Click on 'Random Cookie' to generate a random cookie or you could input your own generated cookie and click on 'Validate Cookie' to see if its valid.</p>
                                 <img src={install5} alt="" />
                             </div>
                             <div className="step2">
@@ -77,6 +83,40 @@ const Installation = () => {
                     </div>
                 </div>
             </div>
+            {showCookie && (
+            <div className="cookie_info">
+                <div className='info-card'>
+                    <h2>CouchDB Information</h2>
+                    <p>
+                        <strong>CouchDB Cookies:</strong> CouchDB uses cookies for
+                        authentication. When you authenticate to a CouchDB instance, it
+                        sets a session cookie that is used for subsequent requests to
+                        verify your identity.
+                    </p>
+                    <p>
+                        <strong>Why it is needed:</strong> Cookies are essential for
+                        maintaining user sessions and ensuring secure communication
+                        between the client and the CouchDB server. They help in
+                        authenticating users and authorizing access to databases and
+                        documents.
+                    </p>
+                    <p>
+                        <strong>CouchDB Nodes and Clusters:</strong> CouchDB is a
+                        distributed database system that operates in a clustered
+                        environment. A CouchDB node is an instance of CouchDB running on a
+                        server. Nodes in a cluster communicate with each other to share
+                        data and workload, providing fault tolerance and scalability.
+                    </p>
+                    <p>
+                        <strong>What are they:</strong> Nodes work together to form a
+                        CouchDB cluster, which is a group of interconnected nodes. Clusters
+                        provide high availability and fault tolerance by replicating data
+                        across multiple nodes. They also enable horizontal scalability by
+                        distributing the workload among the nodes.
+                    </p>
+                    <button onClick={handleShowCookie}>Okay</button>
+                </div>
+            </div> )}
         </>
     )
 }
