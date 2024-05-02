@@ -7,6 +7,7 @@ import edgeImage from '../assets/edge.png'
 import revenueImage from '../assets/revenue.png'
 import prosImage from '../assets/pros.png'
 import consImage from '../assets/cons.png'
+import hostingImage from '../assets/hosting.png'
 
 const Home = () => {
     return(
@@ -42,6 +43,13 @@ const Home = () => {
                             </ul>
                         </div>
                         <img src={serviceImage} />
+                    </div>
+                    <div className="home_text">
+                        <img src={hostingImage} />
+                        <div className="text">
+                        <h2>Hosting</h2>
+                            <p><b>Self-hosting:</b> Install CouchDB on your own servers or machines.</p><p><b>Cloud Hosting:</b> Utilize cloud platforms such as AWS, Azure, or Google Cloud for CouchDB deployment.</p><p><b>Managed Hosting:</b> Opt for managed CouchDB hosting services provided by third-party vendors for easier maintenance and support.</p>
+                        </div>
                     </div>
                     <div className="home_text">
                         <div className="chart">
