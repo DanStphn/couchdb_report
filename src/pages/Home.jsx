@@ -63,7 +63,7 @@ const Home = () => {
                             <ul>
                                 <li><b>Schema-less document structure</b> allows for flexibility in data modeling.</li>
                                 <li><b>Distributed architecture</b> enables horizontal scaling and fault tolerance.</li>
-                                <li><b>ACID compliance</b> ensures data integrity.</li>
+                                <li><b>BASE principle</b> prioritizes availability and partition tolerance over strict consistency.</li>
                                 <li><b>RESTful HTTP API</b> simplifies application integration.</li>
                                 <li><b>Built-in conflict resolution mechanisms</b> handle concurrent updates gracefully.</li>
                             </ul>
